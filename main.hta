@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Simple Menu System</title>
+        <HTA:APPLICATION
+            ID="GA"
+            APPLICATIONNAME="GUI ASSISTANT"
+            BORDER="dialog"
+            BORDERSTYLE="complex"
+            CAPTION="yes"
+            CONTEXTMENU="no"
+            MAXIMIZEBUTTON="no"
+            MINIMIZEBUTTON="no"
+            NAVIGABLE="yes"
+            SCROLL="no"
+            SCROLLFLAT="yes"
+            SELECTION="no"
+            SHOWINTASKBAR="yes"
+            SINGLEINSTANCE="yes"
+            SYSMENU="yes"
+            SCROLL="no"
+            VERSION="0.0.1"
+            WINDOWSTATE="normal"
+        >
+        <script type="text/javascript" language="javascript">
+            // window.resizeTo(250, 250);
+        </script>
+    </head>
+    <body>
+        <script charset="utf-8">
+            var argv = GA.commandLine.split(" ");
+            if (argv.length > 1 && argv[2] === "test") {
+                window.location.replace("test.html");
+            } else {
+                window.location.replace("ga.html");
+            }
+        </script>
+    </body>
+</html>
+

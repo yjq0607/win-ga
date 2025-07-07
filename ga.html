@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Assistant</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <style type="text/css" media="screen">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            .content-container {
+                position: absolute;
+                background: gray;
+                height: 100%;
+                width: 100%;
+                align-content: center;
+            }
+            input {
+                margin: 8px;
+                border-radius: 6px;
+            }
+        </style>
+        <script type="text/javascript" language="javascript">
+            window.resizeTo(250, 100);
+        </script>
+    </head>
+    <body>
+        <div class="content-container">
+            <form onSubmit="entryMatching(this.entryCommand.value); this.entryCommand.value = '';" method="get" accept-charset="utf-8">
+                <input type="text" placeholder="Type command" id="entry_box" name="entryCommand"/>
+                <input type="submit" hidden/>
+            </form>
+        </div>
+        <script src="matching.js"></script>
+    </body>
+</html>
