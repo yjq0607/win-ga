@@ -1,21 +1,22 @@
 var matchArray = {
-    'file': {
-        'qpic': 'qpic address'
+    "file": {
+        "a": "test\\a.txt",
+        "test": "test"
     },
-    'website': {
-        'hko': 'hko address'
+    "website": {
+        "hko": "https://www.hko.gov.hk/en/index.html"
     }
 };
 
 
 function entryMatching(argString) {
-    alert("entryMatching called")
+    // var wshShell = new ActiveXObject("WScript.shell");
     if (argString in matchArray["file"]) {
-        alert(matchArray["file"][argString]);
+        wshShell.run(matchArray["file"][argString]);
         return;
     }
     if (argString in matchArray["website"]) {
-        alert(matchArray["website"][argString]);
+        wshShell.run(matchArray["website"][argString]);
         return;
     }
 }
