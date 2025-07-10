@@ -22,17 +22,27 @@
         <script type="text/javascript" language="javascript">
             window.resizeTo(250, 100);
         </script>
+        <script src="hotkeys.js"></script>
     </head>
     <body>
         <div class="content-container">
-            <form onSubmit="entryMatching(this.entryCommand.value); this.entryCommand.value = '';" method="get" accept-charset="utf-8">
+            <form onSubmit="entryMatching(this.entryCommand.value.toLowerCase()); this.entryCommand.value = '';" method="get" accept-charset="utf-8">
                 <input type="text" placeholder="Type command" id="entry_box" name="entryCommand"/>
                 <input type="submit" hidden/>
             </form>
         </div>
         <script charset="utf-8">
+
+            function setFocus() {
+                document.getElementById("entry_box").focus();
+            }
+
+            var entryBox = document.getElementById("entry_box");
+            entryBox.focus();
             var wshShell = new ActiveXObject("WScript.Shell");
+            document.onkeydown = keyPress;
         </script>
         <script src="matching.js"></script>
+
     </body>
 </html>
